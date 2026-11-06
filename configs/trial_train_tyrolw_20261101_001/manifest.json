@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "status": "prepared_not_trained",
+  "purpose": "owner_exclusions_and_spatial_tyrolw_train_revision",
+  "source_train_manifest_sha256": "d86f771b006d2eb561d7ad3cf2edb429bef11221ef4d1732651059d16147c058",
+  "source_oem_train_sha256": "8c89faaaf76bf0641593576036fb9c86e2ce1177e736fa1d6484f38a76721f2c",
+  "source_oem_val_sha256": "91a8dac45211a4cd43fc14175619492046b312bfd76c5f896b98f1f7b3714709",
+  "source_oem_test_sha256": "60c77b545d69b11b582c35711ef55284937e70824bb91eb859eacbb786f62906",
+  "owner_exclusion_workbook_sha256": "b10b9aaab3a24a680f6a6dd79c6d9b03cd8dcda3f5e2a7bb2e9ee69faa5a1d0d",
+  "approved_exclusions": [
+    [
+      "FLAIR",
+      "D013_2020:aerial/Z10_UU/IMG_009608.tif"
+    ],
+    [
+      "FLAIR",
+      "D013_2020:aerial/Z10_UU/IMG_009618.tif"
+    ],
+    [
+      "FLAIR",
+      "D013_2020:aerial/Z10_UU/IMG_009629.tif"
+    ],
+    [
+      "FLAIR",
+      "D013_2020:aerial/Z10_UU/IMG_009639.tif"
+    ],
+    [
+      "FLAIR",
+      "D013_2020:aerial/Z10_UU/IMG_009681.tif"
+    ],
+    [
+      "OEM",
+      "monrovia/monrovia_44"
+    ],
+    [
+      "OEM",
+      "monrovia/monrovia_47"
+    ],
+    [
+      "OEM",
+      "monrovia/monrovia_54"
+    ]
+  ],
+  "tyrolw_promoted_train_ids": [
+    "tyrolw/tyrolw_1",
+    "tyrolw/tyrolw_10",
+    "tyrolw/tyrolw_13",
+    "tyrolw/tyrolw_14",
+    "tyrolw/tyrolw_15",
+    "tyrolw/tyrolw_18",
+    "tyrolw/tyrolw_2",
+    "tyrolw/tyrolw_23",
+    "tyrolw/tyrolw_25",
+    "tyrolw/tyrolw_28",
+    "tyrolw/tyrolw_29",
+    "tyrolw/tyrolw_3",
+    "tyrolw/tyrolw_31",
+    "tyrolw/tyrolw_37",
+    "tyrolw/tyrolw_38",
+    "tyrolw/tyrolw_39",
+    "tyrolw/tyrolw_4",
+    "tyrolw/tyrolw_41",
+    "tyrolw/tyrolw_43",
+    "tyrolw/tyrolw_44",
+    "tyrolw/tyrolw_48",
+    "tyrolw/tyrolw_5",
+    "tyrolw/tyrolw_50",
+    "tyrolw/tyrolw_6",
+    "tyrolw/tyrolw_60",
+    "tyrolw/tyrolw_61",
+    "tyrolw/tyrolw_65",
+    "tyrolw/tyrolw_66",
+    "tyrolw/tyrolw_68",
+    "tyrolw/tyrolw_7",
+    "tyrolw/tyrolw_8"
+  ],
+  "tyrolw_held_validation_ids": [
+    "tyrolw/tyrolw_16",
+    "tyrolw/tyrolw_17",
+    "tyrolw/tyrolw_19",
+    "tyrolw/tyrolw_20",
+    "tyrolw/tyrolw_21",
+    "tyrolw/tyrolw_33",
+    "tyrolw/tyrolw_36",
+    "tyrolw/tyrolw_45",
+    "tyrolw/tyrolw_49",
+    "tyrolw/tyrolw_51",
+    "tyrolw/tyrolw_52",
+    "tyrolw/tyrolw_55",
+    "tyrolw/tyrolw_56",
+    "tyrolw/tyrolw_57",
+    "tyrolw/tyrolw_58",
+    "tyrolw/tyrolw_62",
+    "tyrolw/tyrolw_69",
+    "tyrolw/tyrolw_70"
+  ],
+  "tyrolw_split_rule": "touching_components_with_author_val_held_out",
+  "tyrolw_source_crs": "EPSG:31254",
+  "tyrolw_pixel_size_m": 0.3,
+  "oem_train": "configs/trial_train_tyrolw_20261101_001/oem_train.csv",
+  "oem_val": "configs/trial_train_tyrolw_20261101_001/oem_val.csv",
+  "oem_test_unused": "configs/splits/test.csv",
+  "train_manifest_sha256": "25050dafa70461a43e202d3930adb988be954bf6d2ec6f84582cf2f00373cc17",
+  "oem_train_sha256": "2038d99d03b7c4f9dd7ff5aa03580fec21daf75e5e5fd68834a95c35b5e32c7d",
+  "oem_val_sha256": "5c285e82048e9733ee8e8428ad743a850beba7ac6ce6e9611b539018db56ce3c",
+  "train_unique_pairs": 4023,
+  "focus_hard_pairs": 1992,
+  "source_counts": {
+    "OEM": 1916,
+    "CAID": 1461,
+    "LandCover": 69,
+    "xBD": 54,
+    "FLAIR": 523
+  },
+  "focus_counts": {
+    "OEM": 959,
+    "CAID": 455,
+    "LandCover": 1,
+    "xBD": 54,
+    "FLAIR": 523
+  },
+  "source_catalog_sha256": "df4574f7a1e3754c98796c6b1844d2c204c50ccab9af1d92490edeed6b83e48d",
+  "caid_selected_index_sha256": "f5ce9fcd1473444f15ea419dc57438d7455d7b2e1cc4da7c39c38be8f0d44753",
+  "flair_selected_index_sha256": "6f345ed18615989469c45af0ee4d441c65670a04be991f97a655dba073cef5ce",
+  "flair_max_per_spatial_cluster": 48,
+  "known_bad_or_ambiguous_exclusions": {
+    "CAID": [
+      "img_15416",
+      "img_1609",
+      "img_18042",
+      "img_4329"
+    ],
+    "FLAIR_owner_wrong_water": [
+      "D013_2020:aerial/Z15_UN/IMG_010112.tif"
+    ],
+    "FLAIR_previous_ambiguous_river": 4,
+    "FLAIR_pool_class13": 7,
+    "LandCover_near_OEM_or_label_conflict": 8,
+    "OEM_owner_exclusions": 36
+  },
+  "baseline_validation_for_comparison": "configs/splits/val.csv",
+  "validation_independent_acquisition": false,
+  "training_performed": false
+}

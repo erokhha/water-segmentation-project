@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "semantic_screened_candidate_not_training_runnable",
+  "parent_manifest": "configs/trial_train_glh_coast_owner_corrected_20261101_002/train_manifest.csv",
+  "parent_sha256": "4e346a4df43fd4fd11848c43bf7b7c67a6287be488ec0e9c71d38545f1e6be0e",
+  "train_manifest": "configs/trial_train_glh_coast_owner_corrected_20261101_003/train_manifest.csv",
+  "train_sha256": "460833ec51f30d706c991b9b330f569f32d89f1a9266d42197da976e953c6e9f",
+  "external_file_index_sha256": "4174e43df0a43a21bd02929c40b62af0bcd188762b557e5801297e1f5704a1be",
+  "owner_decisions_sha256": "421a86157ace8d6dd207855cdf3c99272c4ffee33e69e08bd37839b5df5ccf0e",
+  "quarantine_sha256": "a9140fe1d4a819ac3738f2d9a7ff3a53b294bd06dd2eec831c782cb733c82fa9",
+  "base_pairs": 4023,
+  "new_glh_pairs": 688,
+  "new_coast_pairs": 695,
+  "train_pairs": 5406,
+  "owner_keep_numbers": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "14"
+  ],
+  "owner_exclude_numbers": [
+    "12",
+    "13",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+  ],
+  "unresolved_quarantine_numbers": [
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11"
+  ],
+  "water_module_semantics": "visible_boats_and_near_pier_objects_may_be_water; dry_land_and_islands_are_not_water",
+  "original_data_modified": false,
+  "existing_checkpoints_modified": false,
+  "training_performed": false,
+  "original_manifest": "configs/trial_train_glh_coast_20261101_001/train_manifest.csv",
+  "original_sha256": "392cdbd3692e4369c1d887305c773dfb8d321d9f32f486dbd9f292c1fa498106",
+  "external_index_pairs": 1383,
+  "quarantine_pairs": 17,
+  "semantic_conflict_exclusions": [
+    {
+      "source_audit_number": "0058",
+      "pair_id": "GLH:27:4608:2048",
+      "decision": "exclude_semantic_conflict"
+    },
+    {
+      "source_audit_number": "0609",
+      "pair_id": "GLH:27:7680:1536",
+      "decision": "exclude_semantic_conflict"
+    }
+  ],
+  "previous_owner_review_quarantine_pairs": 15,
+  "owner_decisions_status_column": "original_audit_status",
+  "owner_decisions_status_note": "Historical audit status is preserved; current water-model decision is in decision column. Review 01-04 are kept, not current conflicts."
+}

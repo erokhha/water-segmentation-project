@@ -1,0 +1,102 @@
+{
+  "source": "LandCover.ai v1",
+  "archive_md5": "3268c89070e8734b4e91d531c0617e03",
+  "archive_sha256": "dd448287ff3a76291f2b159084b8a265f2ba4559bb80b0551fc8c6c0eb149a4b",
+  "buffer_m": 1000.0,
+  "oem_overlap_excluded_sources": [
+    "M-33-20-D-c-4-2",
+    "M-33-20-D-d-3-3",
+    "M-33-32-B-b-4-4",
+    "M-34-32-B-a-4-3",
+    "M-34-51-C-b-2-1",
+    "M-34-51-C-d-4-1",
+    "M-34-6-A-d-2-2",
+    "N-33-96-D-d-1-1",
+    "N-34-106-A-b-3-4",
+    "N-34-140-A-b-3-2",
+    "N-34-140-A-b-4-2",
+    "N-34-140-A-d-3-4",
+    "N-34-140-A-d-4-2",
+    "N-34-94-A-b-2-4",
+    "N-34-97-C-b-1-2",
+    "N-34-97-D-c-2-4"
+  ],
+  "hard_dry_index_sha256": "2c4827b84f263e23f71a101567026d68149592fdaa1b6fd74c2869254f304cc2",
+  "hard_dry_count": 77,
+  "source_count": 18,
+  "source_sha256": {
+    "M-34-5-D-d-4-2": {
+      "images": "fe09e4f023c7e36fb238f369a5d3ea0765b5b7aa0099e641db856d50174bf39a",
+      "masks": "1f1b6d4dcd0f36664d637ed647c6868d77aa44da20f83fc93a930a6d7f8d41dc"
+    },
+    "M-34-56-A-b-1-4": {
+      "images": "5d05798b9b71a1d20ea54594543073dbbc1714466916785246fc277abc8eefc0",
+      "masks": "d5b79820733ce72fd52ff8c3c0adfaeeacc8b5f13a7c8a4341786ccec1d27363"
+    },
+    "M-34-65-D-c-4-2": {
+      "images": "c85b27fd11d5a24222a3d7d8ddf079ea279278d77be7cc6c6760bb7dc2be7514",
+      "masks": "8ecb89966d70f501ba06fb56d9d32115a38073695675774cf81dd543045b5f82"
+    },
+    "M-34-65-D-d-4-1": {
+      "images": "fde0b54117fd9592cc9f469282504b10d00cc59362471834ba9152313a0eefab",
+      "masks": "8cea84df2c072bedac524bdddd71c03547b9d3555dcd4e89b672cc79c728bd5f"
+    },
+    "M-34-68-B-a-1-3": {
+      "images": "da5e97ca5a1c2c56a3a2acc87139123f981757d83dd2de8206c690134e18c9c8",
+      "masks": "60d3b2c8517c98a1feae0cdea054b4c55d4e99c9b90a9fca29e67e0c4c53ed83"
+    },
+    "M-34-77-B-c-2-3": {
+      "images": "69a604542e6a777492c594a349f4822943bb16d9ac1c49b2a7850564c39f2c3f",
+      "masks": "46aca6cb1ec69414e6dcd172e265d731874b74508d94caac6400d8f848f99f98"
+    },
+    "N-33-104-A-c-1-1": {
+      "images": "1248c6e5997c3a29aab5275a231c3669a957a6a3e2cfcbadcc749f1143e1f18c",
+      "masks": "ba90fd892e690563f43b64d0ef03d5f04ac121e01f4b6f15f2d29c34c1cd4c52"
+    },
+    "N-33-119-C-c-3-3": {
+      "images": "a9273030145e05329257061b78beecce8bb1a2bc67df7104ff86da9098bbc0f2",
+      "masks": "0f9a8ee3e3d07c93c355764a939e698a9552a2f3261eba0b63a52e6f84447857"
+    },
+    "N-33-130-A-d-3-3": {
+      "images": "782694fe868ac2435dd9781420c7ed31ca4ae87cb24624bddf77781d53b409cd",
+      "masks": "768bbe562b6cf708db245418a48d80a3ed979be5fd592d2e95d41957612f13ac"
+    },
+    "N-33-130-A-d-4-4": {
+      "images": "aa2a4edca87e642831b2b601df27898d496a195ebbd46144a54eb511dff27e41",
+      "masks": "ceaac51b4d2c1785a5dac0611a1d2ff9c2ac306d203af7c0e79a71fc3b35b460"
+    },
+    "N-33-139-C-d-2-2": {
+      "images": "fe0b50c13c1a11a36384e29fc1a2acf4ac63bf7de125873f44312759a6b2d549",
+      "masks": "150c7162e9f476aface4309ff0082daa2009416906f1eef71663774ab365962a"
+    },
+    "N-33-139-C-d-2-4": {
+      "images": "1182dfc507d22562f001e2e21d6fe0abacfeeb620a7d9fb1b29b3d933991e327",
+      "masks": "4b721437b20a590c0dad984cfafb92f50290ce4cf15bc7d30fdcffdf16b74b2a"
+    },
+    "N-33-139-D-c-1-3": {
+      "images": "85688b3786f09008209616849f4af9ffa8316bffaec8441cf9aca423eb338f48",
+      "masks": "a2aaec51edee1f0d734b3e2d648216e007791d5b29ca2e310aea953619895dac"
+    },
+    "N-33-60-D-c-4-2": {
+      "images": "6621bf251c3b511e05e01c20b72df9725cd0d6dcb108b8dfed7cc12a7f888525",
+      "masks": "59f03c773ff7cfdccc77dfea88c035a074e564705a0e1f2e0b5c89f100418527"
+    },
+    "N-33-60-D-d-1-2": {
+      "images": "3e9de1f64e9c15825614934c38ef8819a5c5cc753c50667d17f649920f2cbc53",
+      "masks": "68f3c96bbaaa11647b46e93b17bb49c41ad11f17bd0836b048df8959f46e97ad"
+    },
+    "N-34-106-A-c-1-3": {
+      "images": "431b8dc8c38b3d0449478dcf36853ba5e71beb3482754261645fbe90762d701e",
+      "masks": "ea9116b7905d41b42c501230e89bdb0779645e9e9bd6a17786408c1c007e1507"
+    },
+    "N-34-66-C-c-4-3": {
+      "images": "f053461cd11ad4b16b223033cf8c0e0c20b714a96d8501b6c72d1c5015dfde19",
+      "masks": "b020e78dd6792044633cb72d9ced8f3a998ad59b716c51867bdf8b82a421ab22"
+    },
+    "N-34-77-A-b-1-4": {
+      "images": "86ff1ce462d3cd9be147f5648697681a69a2c4721159aef21ae1cb364e0a5a6b",
+      "masks": "ef4c369eb21e9faeed9c4243cc7f1022589434167404136a2781cf2773f54427"
+    }
+  },
+  "selection": "author Train; valid source >1 km from OEM Val/Test; 30 dry tiles/source sampled seed151; FP>=1000 by epoch3 at 0.65; RGB-black<=1%; max8 tiles/source"
+}

@@ -1,0 +1,58 @@
+{
+  "status": "prepared_not_trained",
+  "schema_version": 1,
+  "purpose": "continue_selected_old_checkpoint_with_4000_distinct_train_pairs",
+  "parent_checkpoint": "outputs/models/magic_dose2_control_full_s44/step_1152.pth",
+  "parent_sha256": "794445b257b6cc8f1a4c3d2cd922d77a6bdce63ec65e88b074bdcaa67bd621f5",
+  "oem_train": "outputs/checks/oem_owner_filter_20261028_001/train_filtered.csv",
+  "oem_val": "configs/splits/val.csv",
+  "oem_test_unused": "configs/splits/test.csv",
+  "threshold": 0.65,
+  "pos_weight": 1,
+  "learning_rate": 5e-06,
+  "freeze_batchnorm": true,
+  "batch_size": 1,
+  "seed": 44,
+  "train_unique_pairs": 4000,
+  "focus_hard_pairs": 2000,
+  "source_counts": {
+    "CAID": 1461,
+    "FLAIR": 528,
+    "LandCover": 69,
+    "OEM": 1888,
+    "xBD": 54
+  },
+  "focus_counts": {
+    "CAID": 455,
+    "FLAIR": 528,
+    "LandCover": 1,
+    "OEM": 962,
+    "xBD": 54
+  },
+  "flair_max_per_spatial_cluster": 48,
+  "caid_hard_rule": "FN>=max(1000,0.1*water), water_fraction in [0.05,0.95), FP<=12500",
+  "caid_easy_rule": "FN<1000 and FP<1000; stratified by original water fraction",
+  "known_bad_or_ambiguous_exclusions": {
+    "CAID": [
+      "img_15416",
+      "img_1609",
+      "img_18042",
+      "img_4329"
+    ],
+    "FLAIR_owner_wrong_water": [
+      "D013_2020:aerial/Z15_UN/IMG_010112.tif"
+    ],
+    "FLAIR_previous_ambiguous_river": 4,
+    "FLAIR_pool_class13": 7,
+    "LandCover_near_OEM_or_label_conflict": 8,
+    "OEM_owner_exclusions": 36
+  },
+  "selection_script_sha256": "004a24cca2c7d113fb79fbc8baa4aa7ad309619dbee11d733b6c3f43cbb31abb",
+  "source_catalog_sha256": "df4574f7a1e3754c98796c6b1844d2c204c50ccab9af1d92490edeed6b83e48d",
+  "flair_label_counts_sha256": "1353b3847fe4a697ede4671b8a1d69b12c1b928b2604a0f1da4c5db069cbf727",
+  "train_manifest_sha256": "d86f771b006d2eb561d7ad3cf2edb429bef11221ef4d1732651059d16147c058",
+  "caid_selected_index_sha256": "f5ce9fcd1473444f15ea419dc57438d7455d7b2e1cc4da7c39c38be8f0d44753",
+  "flair_selected_index_sha256": "6f345ed18615989469c45af0ee4d441c65670a04be991f97a655dba073cef5ce",
+  "training_performed": false,
+  "semantic_limit": "Most source masks have not been manually reviewed pixel by pixel."
+}
