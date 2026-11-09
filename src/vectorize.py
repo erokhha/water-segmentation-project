@@ -1,4 +1,3 @@
-"""Exact water-mask polygonization in local pixel coordinates."""
 from __future__ import annotations
 
 import warnings

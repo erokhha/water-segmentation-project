@@ -1,17 +1,9 @@
-"""Разделение OpenEarthMap по регионам.
-
-Создаёт списки Train, Validation и Test.
-Не изменяет и не копирует исходные изображения.
-"""
-
 from pathlib import Path
 from collections import defaultdict
 import csv
 import json
 import random
 
-
-# 1. Пути к данным и результатам
 
 PROJECT = Path(__file__).resolve().parents[1]
 
@@ -23,8 +15,7 @@ SEED = 42
 
 
 def main(argv=None):
-    # 2. Читаем результаты предыдущей проверки
-
+   
     if not INVENTORY.is_file():
         raise SystemExit(
             f"Не найден отчёт предыдущего этапа: {INVENTORY}"
@@ -43,15 +34,13 @@ def main(argv=None):
         )
 
 
-    # 3. Получаем список регионов
+
 
     regions = sorted({row["region"] for row in rows})
 
-    # Перемешиваем регионы воспроизводимым способом
+
     random.Random(SEED).shuffle(regions)
 
-    # Примерно 70% регионов для обучения,
-    # 15% для настройки, 15% для проверки.
     n_val = round(len(regions) * 0.15)
     n_test = round(len(regions) * 0.15)
 
@@ -62,8 +51,6 @@ def main(argv=None):
     }
 
 
-    # 4. Проверяем, что регионы не пересекаются
-
     assert len(set.union(*sets.values())) == len(regions)
 
     assert all(
@@ -73,8 +60,6 @@ def main(argv=None):
         if a != b
     )
 
-
-    # 5. Распределяем изображения по группам
 
     by_split = defaultdict(list)
 
@@ -97,8 +82,6 @@ def main(argv=None):
             for name, group in sets.items()
             if row["region"] in group
         )
-
-        # Проверяем существование исходных файлов
         for key in ("image", "mask"):
 
             path = DATA / row[key]
@@ -108,7 +91,6 @@ def main(argv=None):
                     f"Не найден {key}: {path}"
                 )
 
-        # Проверяем точные дубликаты изображений
         image_hash = row["image_sha256"]
 
         if (
@@ -123,8 +105,6 @@ def main(argv=None):
 
         by_split[split].append(row)
 
-
-    # 6. Создаём папку результатов
 
     OUT.mkdir(parents=True, exist_ok=True)
 
@@ -149,8 +129,6 @@ def main(argv=None):
     }
 
 
-    # 7. Сохраняем три списка
-
     for name in ("train", "val", "test"):
 
         group_rows = sorted(
@@ -158,7 +136,6 @@ def main(argv=None):
             key=lambda row: row["sample_id"]
         )
 
-        # В каждой выборке должна присутствовать вода
         if (
             not group_rows
             or not any(
@@ -185,7 +162,6 @@ def main(argv=None):
             writer.writeheader()
             writer.writerows(group_rows)
 
-        # Считаем статистику
         n_valid = sum(
             int(row["valid_pixels"])
             for row in group_rows
@@ -213,9 +189,6 @@ def main(argv=None):
             f"с водой: {summary[name]['images_with_water']:4} | "
             f"доля воды: {100 * n_water / n_valid:.2f}%"
         )
-
-
-    # 8. Сохраняем общую информацию о разделении
 
     summary_path = OUT / "summary.json"
 

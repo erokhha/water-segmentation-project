@@ -1,4 +1,3 @@
-"""Действительная область исходного TIFF и отдельная версия водной маски."""
 from __future__ import annotations
 
 import argparse
@@ -10,8 +9,6 @@ import rasterio
 from rasterio.enums import ColorInterp
 from rasterio.windows import Window
 from scipy import ndimage
-
-from infer_target import file_hash
 
 
 def derive_valid_footprint(

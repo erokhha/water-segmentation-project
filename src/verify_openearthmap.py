@@ -1,5 +1,4 @@
-"""Проверить скачанный официальный архив OpenEarthMap v1 без распаковки.
-
+"""
 Источник контрольной суммы:
 https://zenodo.org/records/7223446
 
@@ -20,7 +19,6 @@ EXPECTED_MD5 = "64155d1dc9d3b68536063f79878e1a67"
 
 
 def file_md5(path: Path) -> str:
-    # MD5 используется для сравнения с опубликованным архивом, не для паролей.
     digest = hashlib.md5(usedforsecurity=False)
     size = path.stat().st_size
     read = 0
@@ -47,8 +45,6 @@ def main() -> None:
     print("MD5:", actual)
     if actual != EXPECTED_MD5:
         raise SystemExit("ОШИБКА: контрольная сумма не совпала. Не распаковывайте архив и не запускайте следующие шаги.")
-    # Центральный каталог ZIP позволяет узнать размер после распаковки.
-    # Целостность всего файла уже проверена по совпавшей MD5.
     with zipfile.ZipFile(archive) as bundle:
         members = bundle.infolist()
         file_count = sum(not m.is_dir() for m in members)

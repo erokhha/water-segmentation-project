@@ -3,17 +3,6 @@
 The model architecture is imported unchanged from model.py. No historical
 inference, training or audit scripts are imported.
 
-Examples (run from repository root):
-    python src/infer.py --image /path/to/rgb.tif \
-      --checkpoint outputs/models/BRANCH/epoch_009.pth \
-      --output outputs/checks/infer_B09_768 --window-size 768 \
-      --stride 576 --threshold 0.55 --preflight
-
-    python src/infer.py --image /path/to/rgb.tif \
-      --checkpoint outputs/models/BRANCH/epoch_009.pth \
-      --output outputs/checks/infer_B09_768 --window-size 768 \
-      --stride 576 --threshold 0.55 --review-csv docs/stage6-review-windows.csv
-
 Outputs: water_probability.tif (float32), water_mask.tif (uint8 0/1),
 manifest.json and optional preview images. Existing output directories are
 never overwritten. The entire image rectangle is processed; no boundary or
@@ -242,7 +231,6 @@ def load_model_and_inputs(
             len(saved["history"]) != metadata_epoch:
         raise ValueError("Checkpoint history length differs")
 
-    # model.py is intentionally unchanged. Import it only when needed.
     from model import create_model
     model = create_model()
     model.load_state_dict(saved["model_state_dict"], strict=True)
